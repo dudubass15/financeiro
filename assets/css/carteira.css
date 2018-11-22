@@ -1,0 +1,54 @@
+#navbar-nav li .nav-link{
+    color: aliceblue;
+}
+#navbar-nav li .nav-link:hover{
+    background-color: #64BEE9;
+}
+
+/* Inicio Botão flutuante da página home */
+#button-flutuante{
+    width: 100%;
+}
+#button-flutuante a{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: right;
+}
+#button-flutuante i{
+    color: white;
+}
+/* Final do Botão flutuante da página home */
+
+
+
+/* Painel 01 referente a Carteira */
+#carteira{
+    margin: 5px;
+    width: 45%;
+    float: left;
+    background-color: #0061BE;
+}
+#carteira h5{
+    color: white;
+}
+#carteira hr{
+    background-color: white;
+}
+#carteira p{
+    color: white;
+}
+#carteira .card-valor{
+    text-align: center;
+    margin: auto;
+    margin-top: 45px;
+    font-size: 24px;
+}
+#carteira .card-text{
+    text-align: center;
+    margin-top: 30px;
+}
+/* Final do painel 01 referente a Carteira */
+
+.card-title i{
+    float: right;
+}

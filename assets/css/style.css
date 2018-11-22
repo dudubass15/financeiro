@@ -1,0 +1,110 @@
+#navbar-nav li .nav-link{
+    color: aliceblue;
+}
+#navbar-nav li .nav-link:hover{
+    background-color: #64BEE9;
+}
+
+/* Painel 01 referente a Carteira */
+
+#card-carteira{
+    background-color: #0061BE;
+}
+#card-carteira h5{
+    color: white;
+}
+#card-carteira hr{
+    background-color: white;
+}
+#card-carteira p{
+    color: white;
+}
+#card-carteira .card-valor{
+    text-align: center;
+    margin: auto;
+    margin-top: 45px;
+    font-size: 24px;
+}
+#card-carteira .card-text{
+    text-align: center;
+    margin-top: 30px;
+}
+/* Final do painel 01 referente a Carteira */
+
+
+/* Painel 02 referente ao Bônus */
+#card-bonus{
+    background-color: #00BE4E;
+}
+#card-bonus h5{
+    color: white;
+}
+#card-bonus hr{
+    background-color: white;
+}
+#card-bonus p{
+    color: white;
+}
+#card-bonus .card-valor{
+    text-align: center;
+    margin: auto;
+    margin-top: 45px;
+    font-size: 24px;
+}
+#card-bonus .card-text{
+    text-align: center;
+    margin-top: 30px;
+}
+/* Final do painel 02 referente ao Bônus */
+
+
+/* Painel 03 referente a Despesas */
+#card-despesas{
+    background-color: #FF2235
+}
+#card-despesas h5{
+    color: white;
+}
+#card-despesas hr{
+    background-color: white;
+}
+#card-despesas p{
+    color: white;
+}
+#card-despesas .card-valor{
+    text-align: center;
+    margin: auto;
+    margin-top: 45px;
+    font-size: 24px;
+}
+#card-despesas .card-text{
+    text-align: center;
+    margin-top: 30px;
+}
+/* Final do painel 03 referente a Despesa */
+
+
+/* Inicio paginação da tabela historico de transações */
+#pagination-historico ul{
+    float: right;
+}
+/* Final Paginação da tabela historico de transações */
+
+
+/* Inicio Botão flutuante da página home */
+#button-flutuante{
+    width: 100%;
+}
+#button-flutuante a{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: right;
+}
+#button-flutuante i{
+    color: white;
+}
+/* Final do Botão flutuante da página home */
+
+#form-cadastro-valores{
+    margin: auto;
+}
