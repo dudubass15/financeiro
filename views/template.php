@@ -13,10 +13,11 @@
 	    <link href="<?php echo URL; ?>/assets/css/mdb.min.css" rel="stylesheet">
 	    <!-- Your custom styles (optional) -->
 	    <link href="<?php echo URL; ?>/assets/css/style.css" rel="stylesheet">
+		<!-- Your custom styles (optional) -->
+		<link href="<?php echo URL; ?>/assets/css/carteira.css" rel="stylesheet">
 	</head>
 
 	<body>
-
 		<!-- Corpo da página -->
 		<div>
 			<header>
@@ -34,23 +35,23 @@
 					<div class="collapse navbar-collapse" id="basicExampleNav">
 						<ul class="navbar-nav mr-auto" id="navbar-nav">
 							<li class="nav-item active">
-								<a class="nav-link" href="painel.html">Home
+								<a class="nav-link" href="<?php echo URL; ?>/home">Home
 									<span class="sr-only">(current)</span>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="carteira.html">Carteira</a>
+								<a class="nav-link" href="<?php echo URL; ?>/carteira">Carteira</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Relatório</a>
+								<a class="nav-link" href="<?php echo URL; ?>/relatorios">Relatório</a>
 							</li>
 							<!-- Dropdown -->
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false">Configurações</a>
 									<div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item" href="#">Tipo Ganho</a>
-										<a class="dropdown-item" href="#">Usuarios</a>
+										<a class="dropdown-item" href="<?php echo URL; ?>/ganhos">Tipo Ganho</a>
+										<a class="dropdown-item" href="<?php echo URL; ?>/usuarios">Usuarios</a>
 									</div>
 							</li>
 						</ul>
@@ -74,18 +75,6 @@
 		</div>
 
 		<div class="rodape">
-
-			<!-- Footer -->
-			<footer class="page-footer font-small blue">
-
-				<!-- Copyright -->
-				<div class="footer-copyright text-center py-3">© <?php echo date("Y"); ?> Copyright:
-					<a href="https://sistemaskadu.com.br"> Sistemaskadu.com.br</a>
-				</div>
-				<!-- Copyright -->
-
-			</footer>
-			<!-- Footer -->
 			
 		</div>
 

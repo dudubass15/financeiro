@@ -207,3 +207,17 @@
     </div>
 
 </main><br><br>
+
+<!-- Final da DIV Container -->
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue" style="bottom: 0px; width: 100%;">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© <?php echo date("Y"); ?> Copyright:
+        <a href="https://sistemaskadu.com.br"> Sistemaskadu.com.br</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
