@@ -81,23 +81,10 @@
             <h1 class="font-weight-bold mb-3">Nº Carteiras Virtuais:</h1><hr>
             
             <br>
-            <?php if($ViewCarteira > 0) {
-                echo "É maior que zero ...";  die;
-            } else{
-                echo "É igual a zero..."; die;
-            } 
-            ?>
-            <div class="card-deck" id="carteira-card-deck">
-                <!-- Carteira -->
-                <div class="card" id="card-carteira">
-                    <div class="card-body">
-                        <h5 class="card-title">Nome completo da pessoa <i class="fa fa-money"></i></h5><hr>
-                            <p class="card-valor">R$: 0,00</p>
-                            <p class="card-text"><small>Atualizado há 3 minutos</small></p>
-                    </div>
-                <!-- End --> 
-                </div>
-            </div><br>
+            
+            <div class="alert alert-danger" role="alert"> Você não possui nenhuma carteira registrada !</div>
+
+            <br>
 
             <div class="modal fade" id="modalDefaultContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <!--Modal: Contact form-->

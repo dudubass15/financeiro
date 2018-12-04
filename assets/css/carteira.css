@@ -24,7 +24,7 @@
 /* Painel 01 referente a Carteira */
 #carteira{
     margin: 5px;
-    width: 45%;
+    width: 50%;
     float: left;
     background-color: #0061BE;
 }
@@ -52,3 +52,4 @@
 .card-title i{
     float: right;
 }
+

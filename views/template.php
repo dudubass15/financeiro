@@ -23,7 +23,7 @@
 			<header>
 				<!-- Barra de navegação da Página -->
 				<nav class="navbar navbar-dark info-color justify-content-between navbar-expand-lg">
-					<a class="navbar-brand" href="#">Gerenciador Financeiro</a>
+					<a class="navbar-brand" href="<?php echo URL; ?>/home">Gerenciador Financeiro</a>
 			
 					<!-- Collapse button -->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -57,8 +57,14 @@
 						</ul>
 			
 						<form class="form-inline">
+							<div class="md-form my-0" style="margin: 10px; color: white;">
+								<p class="navbar-nav mr-auto">Olá, <?php echo $_SESSION['nome'] ?></p>
+							</div>
 							<div class="md-form my-0">
-									<button type="button" class="btn btn-sm btn-primary waves-effect"><i class="fa fa-sign-in pr-2" aria-hidden="true"></i>Logout</button>
+								<a href="<?php echo URL; ?>/usuarios/logout/<?php echo $_SESSION['id'] ?>">
+									<button type="button" class="btn btn-sm btn-primary waves-effect">
+										<i class="fa fa-sign-in pr-2" aria-hidden="true"></i>Logout</button>
+								</a>
 							</div>
 						</form>
 					</div>
@@ -91,4 +97,7 @@
 	<script type="text/javascript" src="<?php echo URL; ?>/assets/js/mdb.min.js"></script>
 	<!-- Default JavaScript -->
 	<script type="text/javascript" src="<?php echo URL; ?>/assets/js/styles.js"></script>
+
+	<!-- Mascara para validação do Formulário -->
+	<script type="text/javascript" src="<?php echo URL; ?>/assets/js/jquery.mask.js"></script>
 </html>
