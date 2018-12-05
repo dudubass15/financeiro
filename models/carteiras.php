@@ -12,16 +12,23 @@ class carteiras extends model {
     }
 
     public function ViewHome() {
+        $array = array();
+
         $sql = "SELECT * FROM carteira";
         $qry = $this->db->query($sql);
 
         if($qry->rowCount() > 0) {
             $array = $qry->fetchAll();
         } else {
-            header('Location: '.URL.'/carteira/msg');
+            $array = null;
         }
-
         return $array;
+    }
+
+    public function add($usuario, $cor, $descricao, $status) {
+        $sql = "INSERT INTO carteira (usuarios_id, cor, descricao, status, criado, modificado)";
+        $sql.= "VALUE ('$usuario', '$cor', '$descricao', '$status', NOW(), NOW())";
+        $this->db->query($sql);
     }
 }
 

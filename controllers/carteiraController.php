@@ -20,10 +20,29 @@ class carteiraController extends controller {
         $this->loadView('carteira', $dados);
     }
 
-    public function msg() {
+    // public function msg() {
+    //     $dados = array();
+
+    //     $this->loadView('teste', $dados);
+    // }
+
+    public function cadastro() {
         $dados = array();
 
-        $this->loadView('teste', $dados);
+        $carteira = new carteiras();
+        
+        if(isset($_POST['cor']) && !empty($_POST['cor'])) {
+            $usuario = $_SESSION['id'];
+            $cor = $_POST['cor'];
+            $descricao = $_POST['descricao'];
+            $status = $_POST['status'];
+
+            $carteira->add($usuario, $cor, $descricao, $status);
+
+            header('Location: '.URL.'/carteira');
+        }
+
+        $this->loadView('carteira', $dados);
     }
 
 }

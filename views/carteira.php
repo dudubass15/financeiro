@@ -81,23 +81,30 @@
             <h1 class="font-weight-bold mb-3">Nº Carteiras Virtuais:</h1><hr>
             
             <br>
-            <?php if($ViewCarteira > 0) {
-                echo "É maior que zero ...";  die;
-            } else{
-                echo "É igual a zero..."; die;
-            } 
+
+            <?php
+                if($ViewCarteira == null) {
+                    echo'<div class="alert alert-danger" role="alert"> Você não possui nenhuma carteira virtual registrada !</div>';
+                } else {
+                    echo
+                    '
+                    <div class="card-deck" id="carteira-card-deck">
+                        <?php foreach($ViewCarteira as $a): ?>
+                            <!-- Carteira -->
+                            <div class="card" id="card-carteira">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nome completo da pessoa <i class="fa fa-money"></i></h5><hr>
+                                        <p class="card-valor">R$: 0,00</p>
+                                        <p class="card-text"><small>Atualizado há 3 minutos</small></p>
+                                </div>
+                            <!-- End --> 
+                            </div>
+                        <?php endforeach; ?>
+                    </div><br>
+                    
+                    ';
+                }
             ?>
-            <div class="card-deck" id="carteira-card-deck">
-                <!-- Carteira -->
-                <div class="card" id="card-carteira">
-                    <div class="card-body">
-                        <h5 class="card-title">Nome completo da pessoa <i class="fa fa-money"></i></h5><hr>
-                            <p class="card-valor">R$: 0,00</p>
-                            <p class="card-text"><small>Atualizado há 3 minutos</small></p>
-                    </div>
-                <!-- End --> 
-                </div>
-            </div><br>
 
             <div class="modal fade" id="modalDefaultContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <!--Modal: Contact form-->
@@ -117,36 +124,38 @@
 
                         <!--Body-->
                         <div class="modal-body">
-                    
-                            <!-- Default input name -->
-                            <label for="defaultFormNameModalEx">Nome Completo</label>
-                            <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm">
-                    
-                            <br>
+                            <form method="POST" action="<?php echo URL; ?>/carteira/cadastro">
+                                <!-- Default input name -->
+                                <!-- <label for="defaultFormNameModalEx">Nome Completo</label>
+                                <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm">
+                        
+                                <br> -->
 
-                            <!-- Default input cor -->
-                            <label for="defaultFormNameModalEx">Cor</label>
-                            <input type="color" id="defaultFormNameModalEx" class="form-control form-control-sm">
-                    
-                            <br>
-                    
-                            <!-- Default textarea message -->
-                            <label for="defaultFormMessageModalEx">Descrição</label>
-                            <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control"></textarea>
+                                <!-- Default input cor -->
+                                <label for="defaultFormNameModalEx">Cor</label>
+                                <input type="color" id="defaultFormNameModalEx" class="form-control form-control-sm" name="cor">
+                        
+                                <br>
+                        
+                                <!-- Default textarea message -->
+                                <label for="defaultFormMessageModalEx">Descrição</label>
+                                <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control" name="descricao"></textarea>
 
-                            <br>
+                                <br>
 
-                            <div class="custom-control custom-checkbox mb-4">
-                                <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-                                <label class="custom-control-label" for="defaultContactFormCopy">Ativo</label>
-                            </div>
-                    
-                            <div class="text-center mt-4 mb-2">
-                                <button class="btn btn-info">Enviar
-                                    <i class="fa fa-send ml-2"></i>
-                                </button>
-                            </div>
-                    
+                                <div class="custom-control custom-checkbox mb-4">
+                                    <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy" name="status">
+                                    <label class="custom-control-label" for="defaultContactFormCopy">Ativo</label>
+                                </div>
+                        
+                                <div class="text-center mt-4 mb-2">
+                                    <a href="<?php echo URL; ?>/carteira/cadastro">
+                                        <button class="btn btn-info">Enviar
+                                            <i class="fa fa-send ml-2"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <!--/.Content-->
