@@ -190,7 +190,7 @@
 
                 <!--Footer-->
                 <div class="modal-footer justify-content-center" id="modal-buttons">
-                    <a type="button" class="btn btn-primary btn-md" href="<?php echo URL; ?>/cadastro/valores"><i class="fa fa-money ml-1 text-white"></i> Valor</a>
+                    <a type="button" class="btn btn-primary btn-md" href="<?php echo URL; ?>/valor/adicionar"><i class="fa fa-money ml-1 text-white"></i> Valor</a>
                     <a type="button" class="btn btn-primary btn-md" href="<?php echo URL; ?>/cadastro/bonus><i class="fa fa-percent ml-1 text-white"></i> Bônus/Extra</a>
                     <a type="button" class="btn btn-primary btn-md" href="<?php echo URL; ?>/cadastro/despesas"><i class="fa fa-shopping-bag ml-1 text-white"></i> Despesa</a>
                 </div>

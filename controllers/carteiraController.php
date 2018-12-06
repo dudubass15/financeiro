@@ -15,16 +15,18 @@ class carteiraController extends controller {
 
         $dados['ViewCarteira'] = $carteira->ViewHome();
 
-        //print_r($dados); die;
-
         $this->loadView('carteira', $dados);
     }
 
-    // public function msg() {
-    //     $dados = array();
+    public function info() {
+        $dados = array();
 
-    //     $this->loadView('teste', $dados);
-    // }
+        $carteira = new carteiras();
+
+        $dados['ViewCarteira'] = $carteira->ViewInfo();
+
+        $this->loadView('carteira_info', $dados);
+    }
 
     public function cadastro() {
         $dados = array();
@@ -33,11 +35,12 @@ class carteiraController extends controller {
         
         if(isset($_POST['cor']) && !empty($_POST['cor'])) {
             $usuario = $_SESSION['id'];
+            $titulo = $_POST['titulo'];
             $cor = $_POST['cor'];
             $descricao = $_POST['descricao'];
             $status = $_POST['status'];
 
-            $carteira->add($usuario, $cor, $descricao, $status);
+            $carteira->add($usuario, $titulo, $cor, $descricao, $status);
 
             header('Location: '.URL.'/carteira');
         }

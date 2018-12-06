@@ -14,20 +14,32 @@ class carteiras extends model {
     public function ViewHome() {
         $array = array();
 
-        $sql = "SELECT * FROM carteira";
+        $sql = "SELECT * FROM carteira WHERE status = 'on' ";
         $qry = $this->db->query($sql);
 
         if($qry->rowCount() > 0) {
             $array = $qry->fetchAll();
         } else {
-            $array = null;
+            header('Location: '.URL.'/carteira/info');
         }
         return $array;
     }
 
-    public function add($usuario, $cor, $descricao, $status) {
-        $sql = "INSERT INTO carteira (usuarios_id, cor, descricao, status, criado, modificado)";
-        $sql.= "VALUE ('$usuario', '$cor', '$descricao', '$status', NOW(), NOW())";
+    public function ViewInfo() {
+        $sql = "SELECT * FROM carteira";
+        $qry = $this->db->query($sql);
+
+        if($qry->rowCount() > 0) {
+            header('Location: '.URL.'/carteira');
+        } else {
+            $array = $qry->fetchAll();
+        }
+        return $array;
+    }
+
+    public function add($usuario, $titulo, $cor, $descricao, $status) {
+        $sql = "INSERT INTO carteira (usuarios_id, titulo, cor, descricao, status, criado, modificado)";
+        $sql.= "VALUE ('$usuario', '$titulo', '$cor', '$descricao', '$status', NOW(), NOW())";
         $this->db->query($sql);
     }
 }

@@ -82,7 +82,7 @@
             
             <br>
             
-            <div class="alert alert-danger" role="alert"> Você não possui nenhuma carteira registrada !</div>
+            <div class="alert alert-danger" role="alert"> Você não possui nenhuma carteira virtual registrada !</div>
 
             <br>
 
@@ -104,36 +104,38 @@
 
                         <!--Body-->
                         <div class="modal-body">
-                    
-                            <!-- Default input name -->
-                            <label for="defaultFormNameModalEx">Nome Completo</label>
-                            <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm">
-                    
-                            <br>
+                            <form method="POST" action="<?php echo URL; ?>/carteira/cadastro">
+                                <!-- Default input name -->
+                                <!-- <label for="defaultFormNameModalEx">Nome Completo</label>
+                                <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm">
+                        
+                                <br> -->
 
-                            <!-- Default input cor -->
-                            <label for="defaultFormNameModalEx">Cor</label>
-                            <input type="color" id="defaultFormNameModalEx" class="form-control form-control-sm">
-                    
-                            <br>
-                    
-                            <!-- Default textarea message -->
-                            <label for="defaultFormMessageModalEx">Descrição</label>
-                            <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control"></textarea>
+                                <!-- Default input cor -->
+                                <label for="defaultFormNameModalEx">Cor</label>
+                                <input type="color" id="defaultFormNameModalEx" class="form-control form-control-sm" name="cor">
+                        
+                                <br>
+                        
+                                <!-- Default textarea message -->
+                                <label for="defaultFormMessageModalEx">Descrição</label>
+                                <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control" name="descricao"></textarea>
 
-                            <br>
+                                <br>
 
-                            <div class="custom-control custom-checkbox mb-4">
-                                <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-                                <label class="custom-control-label" for="defaultContactFormCopy">Ativo</label>
-                            </div>
-                    
-                            <div class="text-center mt-4 mb-2">
-                                <button class="btn btn-info">Enviar
-                                    <i class="fa fa-send ml-2"></i>
-                                </button>
-                            </div>
-                    
+                                <div class="custom-control custom-checkbox mb-4">
+                                    <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy" name="status">
+                                    <label class="custom-control-label" for="defaultContactFormCopy">Ativo</label>
+                                </div>
+                        
+                                <div class="text-center mt-4 mb-2">
+                                    <a href="<?php echo URL; ?>/carteira/cadastro">
+                                        <button class="btn btn-info">Enviar
+                                            <i class="fa fa-send ml-2"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <!--/.Content-->

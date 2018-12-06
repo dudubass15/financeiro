@@ -78,33 +78,23 @@
 
         <main class="container">
 
-            <h1 class="font-weight-bold mb-3">Nº Carteiras Virtuais:</h1><hr>
+            <h1 class="font-weight-bold mb-3">Carteiras Virtuais:</h1><hr>
             
             <br>
 
-            <?php
-                if($ViewCarteira == null) {
-                    echo'<div class="alert alert-danger" role="alert"> Você não possui nenhuma carteira virtual registrada !</div>';
-                } else {
-                    echo
-                    '
-                    <div class="card-deck" id="carteira-card-deck">
-                        <?php foreach($ViewCarteira as $a): ?>
-                            <!-- Carteira -->
-                            <div class="card" id="card-carteira">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nome completo da pessoa <i class="fa fa-money"></i></h5><hr>
-                                        <p class="card-valor">R$: 0,00</p>
-                                        <p class="card-text"><small>Atualizado há 3 minutos</small></p>
-                                </div>
-                            <!-- End --> 
-                            </div>
-                        <?php endforeach; ?>
-                    </div><br>
-                    
-                    ';
-                }
-            ?>
+            <?php foreach($ViewCarteira as $a): ?>
+                <div class="card-deck" id="carteira-card-deck">
+                    <!-- Carteira -->
+                    <div class="card" id="card-carteira" >
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo($a['titulo']); ?> <i class="fa fa-money" style="color: <?php echo($a['cor']); ?>"></i></h5><hr>
+                                <p class="card-valor">R$: 0,00</p>
+                                <p class="card-text"><small>Atualizado há 3 minutos</small></p>
+                        </div>
+                    <!-- End --> 
+                    </div>
+                </div><br>
+            <?php endforeach; ?>           
 
             <div class="modal fade" id="modalDefaultContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <!--Modal: Contact form-->
@@ -126,10 +116,10 @@
                         <div class="modal-body">
                             <form method="POST" action="<?php echo URL; ?>/carteira/cadastro">
                                 <!-- Default input name -->
-                                <!-- <label for="defaultFormNameModalEx">Nome Completo</label>
-                                <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm">
+                                <label for="defaultFormNameModalEx">Título</label>
+                                <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm" name="titulo">
                         
-                                <br> -->
+                                <br>
 
                                 <!-- Default input cor -->
                                 <label for="defaultFormNameModalEx">Cor</label>

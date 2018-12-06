@@ -9,17 +9,18 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>/assets/css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-dark info-color justify-content-between navbar-expand-lg">
-                <a class="navbar-brand" href="#">Gerenciador Financeiro</a>
+        <!-- Barra de navegação da Página -->
+            <nav class="navbar navbar-dark info-color justify-content-between navbar-expand-lg">
+                <a class="navbar-brand" href="<?php echo URL; ?>/home">Gerenciador Financeiro</a>
         
                 <!-- Collapse button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -29,36 +30,40 @@
         
                 <!-- Collapsible content -->
                 <div class="collapse navbar-collapse" id="basicExampleNav">
-        
                     <ul class="navbar-nav mr-auto" id="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="painel.html">Home
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo URL; ?>/home">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="carteira.html">Carteira</a>
+                            <a class="nav-link" href="<?php echo URL; ?>/carteira">Carteira</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Relatório</a>
+                            <a class="nav-link" href="<?php echo URL; ?>/relatorios">Relatório</a>
                         </li>
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">Configurações</a>
                                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Tipo Ganho</a>
-                                    <a class="dropdown-item" href="#">Usuarios</a>
+                                    <a class="dropdown-item" href="<?php echo URL; ?>/ganhos">Tipo Ganho</a>
+                                    <a class="dropdown-item" href="<?php echo URL; ?>/usuarios">Usuarios</a>
                                 </div>
                         </li>
                     </ul>
         
                     <form class="form-inline">
+                        <div class="md-form my-0" style="margin: 10px; color: white;">
+                            <p class="navbar-nav mr-auto">Olá, <?php echo $_SESSION['nome'] ?></p>
+                        </div>
                         <div class="md-form my-0">
-                                <button type="button" class="btn btn-sm btn-primary waves-effect"><i class="fa fa-sign-in pr-2" aria-hidden="true"></i>Logout</button>
+                            <a href="<?php echo URL; ?>/usuarios/logout/<?php echo $_SESSION['id'] ?>">
+                                <button type="button" class="btn btn-sm btn-primary waves-effect">
+                                    <i class="fa fa-sign-in pr-2" aria-hidden="true"></i>Logout</button>
+                            </a>
                         </div>
                     </form>
-        
                 </div>
                 <!-- Collapsible content -->
             </nav><br><br>
@@ -71,7 +76,7 @@
                 <div class="card">
 
                     <h5 class="card-header info-color white-text text-center py-4">
-                        <strong>Novo valor</strong>
+                        <strong>Cadastro de valores</strong>
                     </h5>
 
                     <!--Card content-->
@@ -124,19 +129,30 @@
                 <!-- Material form contact -->
             </div>
         </div>
-    </main>
+    </main><br><br>
 
-      <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Default JavaScript -->
-  <script type="text/javascript" src="js/styles.js"></script>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue" style="bottom: 0px; width: 100%;">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© <?php echo date("Y"); ?> Copyright:
+            <a href="https://sistemaskadu.com.br"> Sistemaskadu.com.br</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="<?php echo URL; ?>/assets/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="<?php echo URL; ?>/assets/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="<?php echo URL; ?>/assets/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="<?php echo URL; ?>/assets/js/mdb.min.js"></script>
+    <!-- Default JavaScript -->
+    <script type="text/javascript" src="<?php echo URL; ?>/assets/js/styles.js"></script>
 </body>
 
 </html>
