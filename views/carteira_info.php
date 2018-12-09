@@ -106,10 +106,10 @@
                         <div class="modal-body">
                             <form method="POST" action="<?php echo URL; ?>/carteira/cadastro">
                                 <!-- Default input name -->
-                                <!-- <label for="defaultFormNameModalEx">Nome Completo</label>
-                                <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm">
-                        
-                                <br> -->
+                                <label for="defaultFormNameModalEx">Título</label>
+                                <input type="text" id="defaultFormNameModalEx" class="form-control form-control-sm" name="titulo">
+                                
+                                <br>
 
                                 <!-- Default input cor -->
                                 <label for="defaultFormNameModalEx">Cor</label>
